@@ -1,10 +1,17 @@
-window.onload = function () {
-    const loader = document.getElementById("loader");
-    const content = document.getElementById("content");
+// Menampilkan loader saat halaman mulai dimuat
+window.addEventListener('load', function() {
+    const loader = document.getElementById('loader');
+    const content = document.getElementById('content');
 
-    loader.style.display = "none"; // Menghilangkan loader
-    content.style.display = "block"; // Menampilkan konten
-};
+    // Sembunyikan loader dan tampilkan konten setelah halaman dimuat
+    setTimeout(function() {
+        loader.style.display = 'none';  // Menghilangkan loader
+        content.style.display = 'block'; // Menampilkan konten
+    }, 1000);  // Memberi sedikit jeda waktu (1 detik) agar animasi lebih halus
+});
+
+
+
 
 // Mengirimkan form menggunakan fetch API
 document.getElementById("contactForm").addEventListener("submit", function(event) {
@@ -66,3 +73,4 @@ document.getElementById("contactForm").addEventListener("submit", function (even
         alert("Terjadi kesalahan, silakan coba lagi.");
     });
 });
+

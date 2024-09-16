@@ -385,34 +385,73 @@ footer p {
         width: 90%;
     }
 }
-* Loader styles */
-#loader {
+
+.loader {
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: #333; /* Warna background loading */
+    background: rgba(24, 23, 23, 0.9);
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     z-index: 9999;
 }
 
-.spinner {
-    width: 80px;
-    height: 80px;
-    border: 8px solid rgba(255, 255, 255, 0.3);
-    border-left-color: #fff;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
+/* Kontainer loader */
+.loader-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    
 }
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
+/* Efek huruf */
+.letter {
+    display: inline-block;
+    margin: 0 5px;
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+/* Animasi bounce */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
     }
-    100% {
-        transform: rotate(360deg);
+    50% {
+        transform: translateY(-20px);
     }
+}
+
+/* Delay animasi untuk efek berturut-turut */
+.letter:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.letter:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.letter:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.letter:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.letter:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.letter:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.letter:nth-child(7) {
+    animation-delay: 0.6s;
 }
