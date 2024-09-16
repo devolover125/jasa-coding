@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-link {
+    list-style-type: none;
+    width: 50%;
+}
+
+.nav-link li {
+    margin: 0 15px;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: green;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(to right, #ff6347, #ff4500);
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+.hero-section h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section p {
+    font-size: 20px;
+    margin: 20px 0;
+    width: 60%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: #fff;
+    color: #ff4500;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-btn:hover {
+    background-color: #ff4500;
+    color: #fff;
+}
+
+/* Services Section */
+.services-section {
+    background-color: #f4f4f4;
+    padding: 70px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.services-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: #ff6347;
+}
+
+.services-section h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    color: #333;
+    z-index: 1;
+}
+
+.service-box {
+    background-color: #fff;
+    padding: 40px 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.service-box h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #ff6347;
+}
+
+.service-box p {
+    font-size: 18px;
+    color: #555;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    padding: 70px 20px;
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.portfolio-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: #ff6347;
+}
+
+.portfolio-section h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.portfolio-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+.portfolio-item h4 {
+    font-size: 24px;
+    margin-top: 15px;
+    color: #333;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Animasi gambar bergerak dari kiri ke kanan */
+@keyframes moveRight {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(100px); }
+}
+
+.animate-img {
+    animation: moveRight 5s ease-in-out infinite alternate;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #f4f4f4;
+    padding: 70px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.contact-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: #ff6347;
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+form {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: left;
+    color: #333;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+form button {
+    background-color: #ff6347;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #ff4500;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 16px;
+    margin: 0;
+}
+.animate-img {
+    width: 300px ;
+    height: auto;
+    border-radius: 10px; /* Sudut membulat */
+    transition: transform 0.5s ease, filter 0.5s ease, box-shadow 0.5s ease;
+    filter: grayscale(50%); /* Awalnya gambar berwarna 50% */
+}
+
+/* Efek saat gambar di-hover */
+.animate-img:hover {
+    transform: scale(1.1); /* Zoom in */
+    filter: grayscale(0%) blur(2px); /* Gambar menjadi full color dan sedikit blur */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3); /* Efek bayangan */
+}
+
+(max-width: 768px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    .nav-links li a {
+        font-size: 14px;
+    }
+
+    .hero-section h2 {
+        font-size: 22px;
+    }
+
+    .hero-section p {
+        font-size: 14px;
+    }
+
+    .cta-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .service-box h3 {
+        font-size: 18px;
+    }
+
+    .service-box p {
+        font-size: 14px;
+    }
+
+    .portfolio-item {
+        padding: 5px;
+    }
+
+    .animate-img {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 250px;
+    }
+
+    form {
+        width: 90%;
+    }
+}
+* Loader styles */
+#loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333; /* Warna background loading */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    width: 80px;
+    height: 80px;
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-left-color: #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
