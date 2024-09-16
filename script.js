@@ -7,7 +7,7 @@ window.addEventListener('load', function() {
     setTimeout(function() {
         loader.style.display = 'none';  // Menghilangkan loader
         content.style.display = 'block'; // Menampilkan konten
-    }, 1000);  // Memberi sedikit jeda waktu (1 detik) agar animasi lebih halus
+    }, 5000);  // Memberi sedikit jeda waktu (1 detik) agar animasi lebih halus
 });
 
 
